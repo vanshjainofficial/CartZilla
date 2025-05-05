@@ -50,7 +50,9 @@ const JeweleryPage = () => {
   return (
     <div className="container">
       <Navbar toggleCart={setShowCart} cartItemCount={cart.length} />
-      <h1>Jewelry Collection</h1>
+      <h1>Jewelry Collection
+      </h1>
+      <h1>Shop here for Jewelry Collection</h1>
       <div className="product-grid">
         {products.map((product) => (
           <div key={product.id} className="product-card">

@@ -7,10 +7,12 @@ import MensClothingPage from "./MensClothingPage";
 import ContactUsPage from "./ContactUsPage"; 
 import WomensClothingPage from "./WomensClothingPage"; 
 
+
 const App = () => {
   return (
     <CartProvider> {}
       <Router>
+
         <Routes>
           <Route path="/" element={<FlashSaleApp />} />
           <Route path="/jewelery" element={<JeweleryPage />} />

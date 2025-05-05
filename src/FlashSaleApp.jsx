@@ -61,6 +61,7 @@ const FlashSaleApp = () => {
           alt="Flash Sale Hero"
           className="hero-image"
         />
+              <h1>Grab these amazing deals before they expire!</h1>
       </div>
 
       <div className="product-grid">
@@ -108,6 +109,7 @@ const FlashSaleApp = () => {
         </div>
       )}
     </div>
+  
   );
 };
 
