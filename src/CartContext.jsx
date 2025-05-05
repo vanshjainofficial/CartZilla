@@ -1,0 +1,29 @@
+
+import React, { createContext, useState, useContext } from "react";
+
+const CartContext = createContext();
+
+export const CartProvider = ({ children }) => {
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (product) => {
+    if (!cart.find(item => item.id === product.id)) {
+      setCart((prevCart) => [...prevCart, product]);
+    }
+  };
+
+  const removeFromCart = (id) => {
+    setCart((prevCart) => prevCart.filter((item) => item.id !== id));
+  };
+
+  return (
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+      {children}
+    </CartContext.Provider>
+  );
+};
+
+// Custom hook to access the cart
+export const useCart = () => {
+  return useContext(CartContext);
+};
