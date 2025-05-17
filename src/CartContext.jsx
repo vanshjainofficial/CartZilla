@@ -23,6 +23,7 @@ export const CartProvider = ({ children }) => {
   );
 };
 
+// Custom hook to access the cart
 export const useCart = () => {
   return useContext(CartContext);
 };

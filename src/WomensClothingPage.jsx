@@ -1,3 +1,5 @@
+// src/WomensClothingPage.jsx
+
 import React, { useEffect, useState } from "react";
 import { useCart } from "./CartContext";
 import Navbar from "./Navbar.jsx";
