@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
+import "./Product.css";
+
 
 const phrases = [
+  "🎧Latest Products",
   "🔥 Deals you can't miss!",
   "⏳ Hurry, time is ticking!",
   "💥 Flash prices, flash savings!",
@@ -19,24 +22,24 @@ const TypingSparkle = () => {
 
     const handleTyping = () => {
       if (!isDeleting) {
-        // Typing forward
+
         setText(currentPhrase.substring(0, charIndex + 1));
         setCharIndex(charIndex + 1);
 
         if (charIndex + 1 === currentPhrase.length) {
-          // Pause before deleting
+
           setTimeout(() => setIsDeleting(true), 1000);
           setTypingSpeed(0);
         } else {
           setTypingSpeed(150);
         }
       } else {
-        // Deleting
+
         setText(currentPhrase.substring(0, charIndex - 1));
         setCharIndex(charIndex - 1);
 
         if (charIndex - 1 === 0) {
-          // Move to next phrase
+
           setIsDeleting(false);
           setPhraseIndex((phraseIndex + 1) % phrases.length);
           setTypingSpeed(500);
