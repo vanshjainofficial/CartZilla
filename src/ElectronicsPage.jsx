@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import "./styles.css";
 import TypingSparkle from "./TypingSparkle.jsx";
 
-const JewelryPage = () => {
+const ElectronicsPage = () => {
   const [products, setProducts] = useState([]);
   const { cart, addToCart, removeFromCart } = useCart();
 
@@ -13,7 +13,7 @@ const JewelryPage = () => {
   const [timers, setTimers] = useState({});
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products/category/jewelery")
+    fetch("https://fakestoreapi.com/products/category/electronics")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -53,9 +53,7 @@ const JewelryPage = () => {
     <div className="">
       <Navbar toggleCart={setShowCart} cartItemCount={cart.length} />
 
-      {/* Add padding-bottom so footer doesn't cover content */}
       <div className="main-content" style={{ paddingBottom: "70px" }}>
-        
         <div className="text"><TypingSparkle /></div>
 
         <div className="product-grid">
@@ -108,4 +106,4 @@ const JewelryPage = () => {
   );
 };
 
-export default JewelryPage;
+export default ElectronicsPage;

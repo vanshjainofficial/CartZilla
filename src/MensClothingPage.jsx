@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useCart } from "./CartContext";
 import Navbar from "./Navbar.jsx";
 import "./styles.css";
-
+import Footer from "./Footer.jsx";
+import TypingSparkle from "./TypingSparkle.jsx";
 const MensClothingPage = () => {
   const [products, setProducts] = useState([]);
   const { cart, addToCart, removeFromCart } = useCart();
@@ -47,9 +48,9 @@ const MensClothingPage = () => {
   const totalAmount = cart.reduce((acc, item) => acc + item.price, 0).toFixed(2);
 
   return (
-    <div className="container">
+    <div className="">
+              <div className="text"><TypingSparkle /></div>
       <Navbar toggleCart={setShowCart} cartItemCount={cart.length} />
-      <h1>Men's Clothing Collection</h1>
       <div className="product-grid">
         {products.map((product) => (
           <div key={product.id} className="product-card">
@@ -98,6 +99,7 @@ const MensClothingPage = () => {
           )}
         </div>
       )}
+      <Footer/>
     </div>
   );
 };

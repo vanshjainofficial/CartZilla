@@ -14,7 +14,7 @@ const Navbar = ({ toggleCart, cartItemCount = 0 }) => {
             Home
           </button>
           <button className="navbar-link" onClick={() => navigate("/jewelery")}>
-            Jewelery
+            Jewellery
           </button>
           <button className="navbar-link" onClick={() => navigate("/men")}>
             Men's Clothing
