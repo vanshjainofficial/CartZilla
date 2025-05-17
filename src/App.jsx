@@ -12,7 +12,7 @@ const App = () => {
   return (
     <CartProvider> {}
       <Router>
-
+        
         <Routes>
           <Route path="/" element={<FlashSaleApp />} />
           <Route path="/jewelery" element={<JeweleryPage />} />
