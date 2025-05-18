@@ -1,5 +1,6 @@
 import React from 'react'
 import { Footer, Navbar } from "../components";
+import Testimonial from "../components/Testimonial";
 const AboutPage = () => {
   return (
     <>
@@ -51,6 +52,7 @@ We’re not just another online store — we’re a countdown to excitement. Eve
           </div>
         </div>
       </div>
+<Testimonial/>
       <Footer />
     </>
   )

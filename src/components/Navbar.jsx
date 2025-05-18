@@ -1,16 +1,21 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-
 const Navbar = () => {
     const state = useSelector(state => state.handleCart)
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light py-3 sticky-top">
             <div className="container">
-                <NavLink className="navbar-brand fw-bold fs-4 px-2" to="/">
-                    Cartzilla🔥- Limited time offer
-                </NavLink>
+            <NavLink className="navbar-brand fw-bold fs-4 px-2 d-flex align-items-center" to="/">
+  <img 
+    src="/assets/logo.png" 
+    alt="Cartzilla Logo" 
+    style={{ width: '60px', height: '60px', marginRight: '8px' }} 
+  />
+  Cartzilla🔥 - Flash Sale
+</NavLink>
+
 
                 <button
   className="navbar-toggler"

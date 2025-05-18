@@ -146,4 +146,15 @@
     height: 250px;
     width: 100%;
   }
-  
+
+.footer-bg {
+  background: linear-gradient(90deg, #e0ecf8 0%, #f2f2f2 100%);
+  color: #2d2d2d;
+}
+.footer-bg a {
+  color: #2d2d2d;
+}
+.footer-bg a:hover {
+  color: #5b4d8f;
+  text-decoration: underline;
+}

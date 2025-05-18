@@ -1,4 +1,5 @@
 import { Navbar, Main, Product, Footer } from "../components";
+import Testimonial from "../components/Testimonial";
 
 function Home() {
   return (
@@ -6,6 +7,7 @@ function Home() {
       <Navbar />
       <Main />
       <Product />
+      <Testimonial/>
       <Footer />
     </>
   )
