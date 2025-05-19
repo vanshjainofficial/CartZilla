@@ -99,7 +99,7 @@
 }  
 .blog-container {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fa; /* light gray */
+  background-color: #f8f9fa;
   padding: 40px 20px;
   border-radius: 8px;
 }
@@ -158,23 +158,23 @@ color: #2d2d2d;
 color: #5b4d8f;
 text-decoration: underline;
 }
-/* Margin top 3rem (like mt-5) */
+
 .mt-5 {
   margin-top: 3rem;
 }
 
-/* Footer base styling */
+
 .footer {
-  padding-top: 1.5rem; /* pt-4 */
-  padding-bottom: 0.5rem; /* pb-2 */
-  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075); /* shadow-sm */
+  padding-top: 1.5rem; 
+  padding-bottom: 0.5rem; 
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075); 
   background: linear-gradient(90deg, #e0ecf8 0%, #f2f2f2 100%);
   color: #2d2d2d;
 }
 
-/* Container */
+
 .footer-container {
-  max-width: 1140px; /* Bootstrap container max-width */
+  max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -187,7 +187,7 @@ text-decoration: underline;
   gap: 1.5rem;
 }
 
-/* On medium screens and above (>=768px), flex-row instead of column */
+
 @media (min-width: 768px) {
   .footer-container {
     flex-direction: row;
@@ -195,19 +195,19 @@ text-decoration: underline;
   }
 }
 
-/* Navigation styling */
+
 .footer-nav {
   margin-bottom: 1rem;
 }
 
-/* Remove bottom margin on md+ */
+
 @media (min-width: 768px) {
   .footer-nav {
     margin-bottom: 0;
   }
 }
 
-/* List styling */
+
 .footer-list {
   list-style: none;
   padding: 0;
@@ -219,14 +219,14 @@ text-decoration: underline;
   justify-content: center;
 }
 
-/* On md+, left align nav */
+
 @media (min-width: 768px) {
   .footer-list {
     justify-content: flex-start;
   }
 }
 
-/* Links inside list */
+
 .footer-link {
   text-decoration: none;
   color: inherit;
@@ -239,13 +239,13 @@ text-decoration: underline;
   text-decoration: underline;
 }
 
-/* Contact section */
+
 .footer-contact {
   text-align: center;
   margin-bottom: 1rem;
 }
 
-/* Remove bottom margin on md+ */
+
 @media (min-width: 768px) {
   .footer-contact {
     margin-bottom: 0;
@@ -253,17 +253,17 @@ text-decoration: underline;
   }
 }
 
-/* Paragraphs with mb-1 */
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }
 
-/* Contact links same as footer-link */
+
 .footer-contact a.footer-link {
   font-weight: normal;
 }
 
-/* Contact Form link underline only */
+
 .footer-link-underline {
   text-decoration: underline;
   color: inherit;
@@ -275,27 +275,27 @@ text-decoration: underline;
   color: #5b4d8f;
 }
 
-/* Social icons container */
+
 .footer-social {
   display: flex;
-  gap: 0.5rem; /* mx-2 means margin-left and right 0.5rem */
-  font-size: 1.25rem; /* fs-5 */
+  gap: 0.5rem;
+  font-size: 1.25rem;
 }
 
-/* Social icon links */
+
 .social-icon {
   color: #2d2d2d;
   transition: color 0.3s ease;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 0.5rem; /* mx-2 */
+  padding: 0 0.5rem; 
 }
 
 .social-icon:hover {
   color: #5b4d8f;
 }
-/* === Container & Grid === */
+
 .container {
   width: 100%;
   max-width: 1140px;
@@ -323,7 +323,7 @@ text-decoration: underline;
   max-width: 33.3333%;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .col-md-4 {
     flex: 0 0 100%;
@@ -331,7 +331,7 @@ text-decoration: underline;
   }
 }
 
-/* === Card === */
+
 .card {
   display: flex;
   flex-direction: column;
@@ -369,7 +369,7 @@ text-decoration: underline;
   font-size: 1.25rem;
 }
 
-/* === Buttons === */
+
 .btn {
   padding: 0.4rem 0.8rem;
   border: none;
@@ -398,7 +398,7 @@ text-decoration: underline;
   background-color: #222;
 }
 
-/* === Margin & Padding Utilities === */
+
 .m-1 {
   margin: 0.25rem;
 }
@@ -421,7 +421,7 @@ text-decoration: underline;
   margin-bottom: 1rem;
 }
 
-/* === Footer Specific === */
+
 .footer-bg {
   background-color: #f8f9fa;
 }
@@ -479,11 +479,11 @@ text-decoration: underline;
   display: inline-block;
   background-color: #212529;
   color: #fff;
-  padding: 6px 12px; /* smaller padding */
+  padding: 6px 12px; 
   margin: 4px;
   border: none;
   border-radius: 4px;
-  font-size: 13px; /* smaller text */
+  font-size: 13px; 
   text-align: center;
   text-decoration: none;
   cursor: pointer;
@@ -517,14 +517,14 @@ text-decoration: underline;
 }
 
 .product-timer {
-  color: #dc3545; /* Bootstrap's danger red */
+  color: #dc3545; 
   font-weight: bold;
 }
 
 .product-timer.expired {
-  color: #6c757d; /* Gray when expired */
+  color: #6c757d; 
 }
-/* AboutPage.css */
+
 
 .about-container {
   max-width: 1140px;
@@ -644,7 +644,7 @@ text-decoration: underline;
 }
 
 .btn-dark {
-  background-color: #212529; /* Bootstrap dark */
+  background-color: #212529; 
   color: white;
   border: none;
   padding: 0.5rem 1.5rem;
