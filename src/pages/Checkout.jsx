@@ -2,7 +2,7 @@ import React from "react";
 import { Footer, Navbar } from "../components";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import "./Layout.css";
+import "./layout.css";
 
 const Checkout = () => {
   const cartItems = useSelector((state) => state.handleCart);
