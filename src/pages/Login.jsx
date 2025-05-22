@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Footer, Navbar } from "../components";
+import '../components/Product.css';
 
 const Login = () => {
   const [loginSuccess, setLoginSuccess] = useState(false);
@@ -8,63 +9,59 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     setLoginSuccess(true);
-    setTimeout(() => setLoginSuccess(false), 3000); // Hide after 3 sec
+    setTimeout(() => setLoginSuccess(false), 3000);
   };
 
   return (
-    <div className="d-flex flex-column min-vh-100">
+    <div className="login-page">
       <Navbar />
 
-      <main className="flex-fill">
-        <div className="container my-3 py-3">
-          <h1 className="text-center">Login</h1>
-          <hr />
-          <div className="row my-4 h-100">
-            <div className="col-md-4 col-lg-4 col-sm-8 mx-auto">
-              <form onSubmit={handleLogin}>
-                <div className="my-3">
-                  <label htmlFor="loginEmail">Email address</label>
-                  <input
-                    type="email"
-                    className="form-control"
-                    id="loginEmail"
-                    placeholder="name@example.com"
-                    required
-                  />
-                </div>
-                <div className="my-3">
-                  <label htmlFor="loginPassword">Password</label>
-                  <input
-                    type="password"
-                    className="form-control"
-                    id="loginPassword"
-                    placeholder="Password"
-                    required
-                  />
-                </div>
-                <div className="my-3">
-                  <p>
-                    New Here?{" "}
-                    <Link
-                      to="/register"
-                      className="text-decoration-underline text-info"
-                    >
-                      Register
-                    </Link>
-                  </p>
-                </div>
-                <div className="text-center">
-                  <button className="my-2 mx-auto btn btn-dark" type="submit">
-                    Login
-                  </button>
-                </div>
-                {loginSuccess && (
-                  <p className="text-success text-center mt-3">
-                    ✅ Login successful!
-                  </p>
-                )}
-              </form>
-            </div>
+      <main className="login-main">
+        <div className="login-container">
+          <h1 className="login-title">Login</h1>
+          <hr className="divider" />
+
+          <div className="form-wrapper">
+            <form onSubmit={handleLogin} className="login-form">
+              <div className="form-group">
+                <label htmlFor="loginEmail">Email address</label>
+                <input
+                  type="email"
+                  id="loginEmail"
+                  placeholder="name@example.com"
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="loginPassword">Password</label>
+                <input
+                  type="password"
+                  id="loginPassword"
+                  placeholder="Password"
+                  required
+                />
+              </div>
+
+              <div className="form-note">
+                <p>
+                  New here?{" "}
+                  <Link to="/register" className="register-link">
+                    Register
+                  </Link>
+                </p>
+              </div>
+
+              <div className="form-submit">
+                <button type="submit" className="btn-submit">
+                  Login
+                </button>
+              </div>
+
+              {loginSuccess && (
+                <p className="login-success">✅ Login successful!</p>
+              )}
+            </form>
           </div>
         </div>
       </main>
