@@ -1,15 +1,49 @@
 import React, { useState } from "react";
 import { Footer, Navbar } from "../components";
-import { Link } from "react-router-dom";
-import '../components/Product.css';
+import { Link, useNavigate } from "react-router-dom";
+import {
+  createUserWithEmailAndPassword,
+  updateProfile,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from "firebase/auth";
+import { auth } from "../components/firebase";
+import "../components/Product.css";
 
 const Register = () => {
   const [registered, setRegistered] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
+  const navigate = useNavigate();
 
-  const handleRegister = (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
-    setRegistered(true);
-    setTimeout(() => setRegistered(false), 3000);
+    const name = e.target.Name.value;
+    const email = e.target.Email.value;
+    const password = e.target.Password.value;
+
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      await updateProfile(userCredential.user, { displayName: name });
+      setRegistered(true);
+      setErrorMsg("");
+      setTimeout(() => {
+        setRegistered(false);
+        navigate("/login");
+      }, 3000);
+    } catch (error) {
+      setErrorMsg(error.message);
+    }
+  };
+
+  const handleGoogleSignIn = async () => {
+    const provider = new GoogleAuthProvider();
+    try {
+      await signInWithPopup(auth, provider);
+      setErrorMsg("");
+      navigate("/");
+    } catch (error) {
+      setErrorMsg(error.message);
+    }
   };
 
   return (
@@ -68,8 +102,21 @@ const Register = () => {
                 </button>
               </div>
 
+              <div className="form-submit">
+                <button
+                  type="button"
+                  className="btn-submit google-btn"
+                  onClick={handleGoogleSignIn}
+                >
+                  <i className=""></i> Register with Google
+                </button>
+              </div>
+
               {registered && (
                 <p className="register-success">✅ Registered successfully!</p>
+              )}
+              {errorMsg && (
+                <p className="register-error">❌ {errorMsg}</p>
               )}
             </form>
           </div>

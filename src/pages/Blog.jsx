@@ -107,7 +107,7 @@ const Blog = () => {
           ))}
         </div>
 
-        {/* Modal */}
+        {}
         {selectedPost && (
           <div
             className="modal show fade"
